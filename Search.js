@@ -52,7 +52,25 @@ class Search extends Component{
       }
         
     
-
+   return (
+            <div className="Search">
+                <input
+                  placeholder="Search by crop" 
+                  label="Search by crop"
+                  icon="search"
+                  onChange={this.onchange}
+                />
+                 <div className="row">
+              {datasearch.map(crop => {
+                return this.searchCity(crop);
+              })}
+            </div>
+            <p>{this.name}</p>
+              
+            </div>
+          );
+        }
+      }
 
 
 
